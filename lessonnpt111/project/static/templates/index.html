@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AngularJS Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <!-- Needed for animations with Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+        <script src="static/js/app.js"></script>
+        <!-- Add the controller to this app -->
+        <script src="static/js/namesController.js"></script>
+    </head>
+    <body> 
+        <!-- Note, you might need to comment out some of these examples for this to work properly -->
+        <div ng-app="myApp" ng-controller="myCtrl" ng-init="mySwitch=true;hour=13">
+            <!--Hide the div basic animation -->
+            <!-- 
+                <p>Hide the DIV: <input type="checkbox" ng-model="myCheck"></p>
+            <div ng-hide="myCheck"></div>
+            <br>
+
+            -->
+            
+            <!-- Animated example hide div -->
+            <!-- 
+                <h1>Hide the DIV: <input type="checkbox" ng-model="myCheck2"></h1>
+            <div class="hidediv" ng-hide="myCheck2"></div>
+            
+            -->
+            <!-- Final example hide div -->
+            <!--
+
+                <p>Hide the DIV: <input type="checkbox" ng-model="myCheck"></p>
+
+            <div ng-hide="myCheck">
+            </div>
+
+            -->
+            <!-- This is for a single page application. We won't really use it rn -->
+            <!--
+            <p><a href="#/!">Main</a></p>
+
+            <a href="#!red">Red</a>
+            <a href="#!green">Green</a>
+            <a href="#!blue">Blue</a>
+
+            -->
+            <!-- Here is what we get from an Ajax query from Angular JS -->
+            <div ng-show="hasCompleted">
+                <div ng-repeat="x in ThePersons">
+                    <p>Here is the person's name: [[x.Name]]</p>
+                    <p>Here is the person's age: [[x.Age]]</p>
+                    <p ng-repeat="y in x.FavoriteNumbers">Their favorite number is: [[y]]</p>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            
+        </script>
+    </body>
+</html>
